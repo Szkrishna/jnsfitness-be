@@ -1,6 +1,6 @@
 import express from 'express';
 const router = express.Router();
-import {addContact} from '../controllers/contact.controller.js';
+import { addContact } from '../controllers/contact.controller.js';
 
 router.post('/contact', addContact);
 router.get('/contact', (req, res) => {
