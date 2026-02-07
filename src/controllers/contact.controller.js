@@ -48,3 +48,20 @@ export const addGymPageDetails = (req, res) => {
         });
     });
 };
+
+export const addcolivingPageDetails = (req, res) => {
+    service.colivingPageDetails(req.body, (err, result) => {
+        if (err) {
+            return res.status(400).json({
+                success: false,
+                message: err.message || 'Error while saving gym details'
+            });
+        }
+
+        res.status(201).json({
+            success: true,
+            message: 'Your details saved successfully',
+            id: result.insertId
+        });
+    });
+};

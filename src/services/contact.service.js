@@ -2,6 +2,7 @@
 import contactModel from '../models/contact.model.js';
 import badmintonModel from '../models/badminton.model.js';
 import gymPageModel from '../models/gympage.model.js';
+import colivingPageModel from '../models/colivingPage.model.js';
 
 const validateNamePhone = (data, callback) => {
     if (!data.name || !data.phone) {
@@ -22,4 +23,8 @@ export const badmintonFormDetails = (data,callback)=>{
 export const gymPageDetails = (data,callback)=>{
     if (!validateNamePhone(data, callback)) return;
     gymPageModel.gymPageDetails(data,callback);
+}
+export const colivingPageDetails = (data,callback)=>{
+    if (!validateNamePhone(data, callback)) return;
+    colivingPageModel.colivingDetails(data,callback);
 }
