@@ -12,17 +12,19 @@ const validateNamePhone = (data, callback) => {
     return true;
 };
 
-export const addContact = (data,callback)=>{
-     if (!validateNamePhone(data, callback)) return;
-    contactModel.addContact(data,callback);
-}
-export const badmintonFormDetails = (data,callback)=>{
+export const addContact = (data, callback) => {
     if (!validateNamePhone(data, callback)) return;
-    badmintonModel.addbadmintonDetails(data,callback);
+    contactModel.addContact(data, callback);
 }
-export const gymPageDetails = (data,callback)=>{
+
+export const badmintonFormDetails = (data, callback) => {
     if (!validateNamePhone(data, callback)) return;
-    gymPageModel.gymPageDetails(data,callback);
+    badmintonModel.addbadmintonDetails(data, callback);
+}
+
+export const gymPageDetails = (data, callback) => {
+    if (!validateNamePhone(data, callback)) return;
+    gymPageModel.gymPageDetails(data, callback);
 }
 export const colivingPageDetails = (data,callback)=>{
     if (!validateNamePhone(data, callback)) return;
